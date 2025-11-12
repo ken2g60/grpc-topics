@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package farewell;
+
+// option go_package = "/proto/gen/farewell;farewellpb"; // trying something new
+option go_package = "/proto/gen;mainpipb";
+
+
+/*
+service AufWiedersehen {
+    rpc BidGoodbye (GoodbyeRequest) returns (GoodbyeResponse);
+}
+*/
+
+message GoodbyeRequest {
+    string name = 1;
+}
+
+message GoodbyeResponse {
+    string message = 1;
+}
+
+
