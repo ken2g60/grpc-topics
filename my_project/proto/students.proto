@@ -1,0 +1,45 @@
+syntax = "proto3"; 
+
+
+option go_package = "/proto/gen;mainapi";
+
+package main;
+
+
+service StudentsService {
+    rpc GetStudents (GetStudentRequest) returns (Students);
+    rpc AddStudents(Students) returns (Students);
+    rpc UpdateStudents (Students) returns (Students);
+    rpc DeleteStudents (StudentIds) returns (DeleteStudentConfirmation);
+}
+
+message DeleteStudentConfirmation {
+    string status = 1;
+    repeated string deleted_ids = 2;
+}
+
+message StudentId {
+    string id = 1;    
+}
+
+message StudentIds {
+    repeated StudentId ids = 1;    
+}
+
+message GetStudentRequest {
+    Student student = 1;
+    int32 page_number = 3;
+    int32 page_size = 4;
+}
+
+message Student {
+    string id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    string email = 4;
+    string class = 5;
+}
+
+message Students {
+    repeated Student students = 1;
+}

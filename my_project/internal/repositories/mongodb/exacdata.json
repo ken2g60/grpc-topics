@@ -1,0 +1,18 @@
+[
+    {
+        "first_name": "charline",
+        "last_name": "brown",
+        "email": "charlie.brown@gmail.com",
+        "username": "charlie",
+        "password": "securepassword",
+        "role":"manager"
+    },
+    {
+        "first_name": "kofi",
+        "last_name": "brown",
+        "email": "kofi.brown@gmail.com",
+        "username": "kofi",
+        "password": "securepassword",
+        "role":"manager"
+    }
+]
